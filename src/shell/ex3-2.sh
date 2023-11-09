@@ -15,7 +15,7 @@ if [[ "$expression" =~ $regex ]]; then
   operator="${BASH_REMATCH[2]}"
   num2="${BASH_REMATCH[3]}"
 else
-  echo "올바른 수식을 입력해주세요."
+  echo "올바른 수식을 입력해주세요. 예: 1+4 또는 5-2"
   exit 1
 fi
 
@@ -33,6 +33,6 @@ elif [ "$operator" = "-" ]; then
   result=$((num1 - num2))
   echo "$result"
 else
-  echo "올바른 연산자를 입력해주세요."
+  echo "올바른 연산자를 입력해주세요 (+ 또는 -)."
   exit 1
 fi
